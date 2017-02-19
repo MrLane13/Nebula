@@ -93,9 +93,9 @@ function drawScene() {
         ctx.closePath();
     }
     function movePaddle() {
-        if(upPressed) {
+        if(upPressed && yLeftPaddle-2 > 0) {
             yLeftPaddle += dy;
-        } else if (downPressed) {
+        } else if (downPressed && yLeftPaddle < (canvas.height-heightLeftPaddle-2) ) {
             yLeftPaddle += -dy;
         }
         if(spacePressed) {
